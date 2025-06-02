@@ -101,6 +101,11 @@
     transform: translateX(100vw) rotate(0deg);
   }
 }
+ @media (max-width: 768px) {
+  .gif-header {
+    height: 60vh !important;
+  }
+}
 
 
   @media (max-width: 768px) {
