@@ -1,119 +1,119 @@
 body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
+   font-family: 'Segoe UI', sans-serif;
+   background-color: #f8f9fa;
+ }
 
-    .gif-header {
-      width: 100%;
-      height: 90vh;
-      display: block;
-      object-fit: cover;
-    }
+ .gif-header {
+   width: 100%;
+   height: auto;
+   display: block;
+ }
 
-    .nav-item {
-      display: inline-block;
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-    }
 
-    .navbar-nav {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      gap: 30px;
-    }
+ .nav-item {
+   display: inline-block;
+   color: white;
+   text-decoration: none;
+   font-size: 1rem;
+ }
 
-    .nav-item a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+ .navbar-nav {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   gap: 30px;
+ }
 
-    .nav-item a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      color: #fff;
-    }
+ .nav-item a {
+   color: white;
+   text-decoration: none;
+   font-size: 1.2rem;
+   transition: background-color 0.3s ease, color 0.3s ease;
+ }
 
-    .btn-maroon {
-      background-color: maroon;
-      color: white;
-      border: none;
-      transition: 0.3s ease;
-    }
+ .nav-item a:hover {
+   background-color: rgba(255, 255, 255, 0.2);
+   color: #fff;
+ }
 
-    .btn-maroon:hover {
-      background-color: white;
-      color: maroon;
-      border: 1px solid maroon;
-    }
+ .btn-maroon {
+   background-color: maroon;
+   color: white;
+   border: none;
+   transition: 0.3s ease;
+ }
 
-    .butterfly-container {
-      position: relative;
-      width: 100%;
-      height: 100px;
-      overflow: hidden;
-    }
+ .btn-maroon:hover {
+   background-color: white;
+   color: maroon;
+   border: 1px solid maroon;
+ }
 
-    .butterfly {
-      position: absolute;
-      left: -100px;
-      top: 10px;
-      width: 80px;
-      animation: flyAcross 10s linear infinite;
-    }
+ .butterfly-container {
+   position: relative;
+   width: 100%;
+   height: 100px;
+   overflow: hidden;
+ }
 
-    @keyframes flyAcross {
-      0% {
-        transform: translateX(0) rotate(0deg);
-      }
+ .butterfly {
+   position: absolute;
+   left: -100px;
+   top: 10px;
+   width: 80px;
+   animation: flyAcross 10s linear infinite;
+ }
 
-      50% {
-        transform: translateX(50vw) translateY(-20px) rotate(15deg);
-      }
+ @keyframes flyAcross {
+   0% {
+     transform: translateX(0) rotate(0deg);
+   }
 
-      100% {
-        transform: translateX(100vw) rotate(0deg);
-      }
-    }
+   50% {
+     transform: translateX(50vw) translateY(-20px) rotate(15deg);
+   }
 
-    @media (max-width: 992px) {
-      .gif-header {
-        height: 60vh !important;
-      }
+   100% {
+     transform: translateX(100vw) rotate(0deg);
+   }
+ }
 
-      .card-img {
-        height: auto !important;
-      }
+ @media (max-width: 992px) {
+   .gif-header {
+     height: 60vh !important;
+   }
 
-      .navbar-nav {
-        gap: 10px;
-      }
+   .card-img {
+     height: auto !important;
+   }
 
-      .nav-item {
-        margin: 0;
-      }
-    }
+   .navbar-nav {
+     gap: 10px;
+   }
 
-    @media (max-width: 576px) {
-      .gif-header {
-        height: 50vh !important;
-      }
+   .nav-item {
+     margin: 0;
+   }
+ }
 
-      footer p {
-        font-size: 0.9rem;
-      }
+ @media (max-width: 999px ) {
+   .gif-header {
+     height: auto !important;
+     width: 100% !important;
+   }
 
-      .btn-maroon {
-        padding: 0.5rem 1rem;
-      }
+   footer p {
+     font-size: 0.9rem;
+   }
 
-      .footer .col-lg-4 {
-        text-align: center !important;
-      }
-    }
+   .btn-maroon {
+     padding: 0.5rem 1rem;
+   }
+
+   .footer .col-lg-4 {
+     text-align: center !important;
+   }
+ }
