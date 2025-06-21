@@ -12,9 +12,30 @@
 </head>
 
 <body>
+
+  <div id="welcomeBox" style="
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background:  #e7b904;
+  color: #ab1f27;
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  font-size: 1.5rem;
+  z-index: 9999;
+  font-family: 'Comic Sans MS', cursive;
+  display: none;
+">
+    🎉 Welcome to The Little Folks School! 🎈
+  </div>
+
+
   <div class="header-image">
     <img src="assets/header sectin.gif" alt="School Header" class="gif-header">
   </div>
+
 
   <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: #ab1f27;">
     <div class="container">
@@ -43,15 +64,23 @@
     </div>
   </nav>
 
-  <div class="container-fluid my-5">
+  <div class="container2 my-2 mx-4">
     <div class="card text-white border-0">
-      <img src="assets/section 2.jpg" class="card-img" alt="School Poster"
-        style="height: 100vh; object-fit: cover; width: 100%; border-radius: 10px;">
+      <img src="assets/online class.webp" class="card-img" alt="School Poster">
       <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center text-center">
-        <a href="about.html" class="btn btn-maroon px-4 py-2 fw-bold mb-5">Know More About Us</a>
+        <a href="about.html" class="btn btn-maroon px-4 py-2 fw-bold mb-3">Know More About Us</a>
+      </div>
+    </div>
+    <div class="card text-white border-0">
+      <img src="assets/webdevelopment.webp" class="card-img" alt="School Poster">
+      <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center text-center">
+        <a href="contact.html#map-location" class="btn btn-maroon px-4 py-2 fw-bold mb-3">
+          Visit Our Location
+        </a>
       </div>
     </div>
   </div>
+  >
 
   <footer class="text-white py-4" style="background-color:#7c0310">
     <div class="container">
@@ -80,6 +109,47 @@
       <img src="assets/butterflies 3.gif" alt="Butterfly" class="butterfly">
     </div>
   </footer>
+
+  <script>
+    // Show welcome box with animation
+    window.addEventListener('load', function () {
+      const box = document.getElementById('welcomeBox');
+      box.style.display = 'block';
+      setTimeout(() => {
+        box.style.opacity = 1;
+        box.style.transition = 'opacity 2s ease';
+      }, 200);
+
+      // Hide after 4 seconds
+      setTimeout(() => {
+        box.style.opacity = 0;
+        setTimeout(() => box.style.display = 'none', 2000);
+      }, 4000);
+
+      // 🎊 Mini confetti effect
+      for (let i = 0; i < 30; i++) {
+        let confetti = document.createElement('div');
+        confetti.style.width = confetti.style.height = '10px';
+        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
+        confetti.style.position = 'fixed';
+        confetti.style.top = Math.random() * window.innerHeight + 'px';
+        confetti.style.left = Math.random() * window.innerWidth + 'px';
+        confetti.style.opacity = 1;
+        confetti.style.borderRadius = '50%';
+        confetti.style.zIndex = 9998;
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+          confetti.style.transition = 'all 2s ease';
+          confetti.style.top = window.innerHeight + 'px';
+          confetti.style.opacity = 0;
+        }, 100);
+
+        setTimeout(() => confetti.remove(), 3000);
+      }
+    });
+  </script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
