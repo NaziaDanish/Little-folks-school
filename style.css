@@ -1,4 +1,4 @@
-body {
+ body {
    font-family: 'Segoe UI', sans-serif;
    background-color: #f8f9fa;
  }
@@ -55,20 +55,32 @@ body {
  .container2 {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 30px;
-  align-items: center;
   justify-content: center;
   padding: 20px;
-  height: auto; /* 100vh hata diya */
 }
 
-.card-img {
-  height: 300px; /* Aap isse 250 ya 350 bhi rakh sakte hain */
-  object-fit: cover;
-  width: 100%;
-  border-radius: 10px;
+.container2 .card {
+  flex: 1 1 45%; 
+  max-width: 500px;
 }
 
+@media (max-width: 768px) {
+  .container2 {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .container2 .card {
+    width: 90%;
+    flex: 1 1 100%;
+  }
+
+  .card-img {
+    height: auto;
+  }
+}
 
  .butterfly-container {
    position: relative;
